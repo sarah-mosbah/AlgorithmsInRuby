@@ -1,4 +1,4 @@
 # AlgorithmsInRuby
 
 
-Merge, Bubble sort Algorithms
+Merge, Bubble, Selection sort Algorithms
