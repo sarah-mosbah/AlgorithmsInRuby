@@ -17,4 +17,20 @@ def binary_search(array, target)
 end
 
 
-p binary_search([1,2,4,8,99,1025], 80)
+
+
+def binary_search_with_index(array, target, lo=0, high=array.length-1)
+    return -1 if lo>high
+
+    mid_index= ((high+lo) / 2).ceil 
+    if array[mid_index] > target
+       return binary_search_with_index(array, target,lo, mid_index-1)
+    elsif array[mid_index] < target
+       return binary_search_with_index(array, target, mid_index+1, high)
+    else
+       return mid_index
+    end
+end
+
+
+p binary_search_with_index([1,2,4,8,99,1025], 99)
